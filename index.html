@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-center">
+    <div class="card auth-card">
+      <div class="brand-area">
+        <h1>Voting Portal</h1>
+        <p class="subtitle">Sign in with your unique password to cast your vote.</p>
+      </div>
+
+      <form id="voterLoginForm" class="form-block">
+        <label for="voterPassword">Voting Password</label>
+        <input
+          type="password"
+          id="voterPassword"
+          placeholder="Enter your voting password"
+          autocomplete="off"
+          required
+        />
+
+        <button type="submit" id="loginBtn">Sign In to Vote</button>
+        <p id="loginMessage" class="message"></p>
+      </form>
+
+      <div class="divider"></div>
+
+      <div class="admin-area">
+        <button class="admin-btn" onclick="goToAdmin()">Admin Login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading overlay -->
+  <div id="loadingOverlay" class="loading-overlay hidden">
+    <div class="spinner"></div>
+    <p>Please wait...</p>
+  </div>
+
+  <script src="passwords.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

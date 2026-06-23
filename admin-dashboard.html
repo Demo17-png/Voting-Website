@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-center wide">
+    <div class="card dashboard-card">
+      <div class="dashboard-top">
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p class="subtitle">Live vote summary</p>
+        </div>
+        <div class="dashboard-actions">
+          <button class="secondary-btn" onclick="logoutAdmin()">Logout</button>
+          <button class="danger-btn" onclick="resetElection()">Reset Votes</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <h3>Total Votes Cast</h3>
+          <p id="totalVotesCast">0</p>
+        </div>
+        <div class="stat-box">
+          <h3>Used Passwords</h3>
+          <p id="usedPasswordsCount">0</p>
+        </div>
+      </div>
+
+      <div class="results-grid">
+        <!-- President -->
+        <div class="result-card">
+          <h2>President</h2>
+
+          <div class="result-line">
+            <span>Adeolu Thomas</span>
+            <strong id="presidentAdeolu">0</strong>
+          </div>
+          <div class="bar"><div id="presidentAdeoluBar" class="bar-fill"></div></div>
+
+          <div class="result-line">
+            <span>Seun Babatunde</span>
+            <strong id="presidentSeun">0</strong>
+          </div>
+          <div class="bar"><div id="presidentSeunBar" class="bar-fill"></div></div>
+        </div>
+
+        <!-- Vice President -->
+        <div class="result-card">
+          <h2>Vice President</h2>
+
+          <div class="result-line">
+            <span>Kemi Jaja</span>
+            <strong id="vpKemi">0</strong>
+          </div>
+          <div class="bar"><div id="vpKemiBar" class="bar-fill"></div></div>
+
+          <div class="result-line">
+            <span>Bola Kunmbi</span>
+            <strong id="vpBola">0</strong>
+          </div>
+          <div class="bar"><div id="vpBolaBar" class="bar-fill"></div></div>
+        </div>
+
+        <!-- Secretary -->
+        <div class="result-card">
+          <h2>Secretary</h2>
+
+          <div class="result-line">
+            <span>Bode Idowu</span>
+            <strong id="secBode">0</strong>
+          </div>
+          <div class="bar"><div id="secBodeBar" class="bar-fill"></div></div>
+
+          <div class="result-line">
+            <span>Johnson Dada</span>
+            <strong id="secJohnson">0</strong>
+          </div>
+          <div class="bar"><div id="secJohnsonBar" class="bar-fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

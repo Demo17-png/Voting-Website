@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-center">
+    <div class="card auth-card">
+      <h1>Admin Login</h1>
+      <p class="subtitle">Enter admin password to access the vote dashboard.</p>
+
+      <form id="adminLoginForm" class="form-block">
+        <label for="adminPassword">Admin Password</label>
+        <input
+          type="password"
+          id="adminPassword"
+          placeholder="Enter admin password"
+          required
+        />
+
+        <button type="submit">Login</button>
+        <p id="adminLoginMessage" class="message"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
